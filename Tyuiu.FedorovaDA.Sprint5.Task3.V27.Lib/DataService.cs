@@ -12,7 +12,12 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task3.V27.Lib
 
             string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
 
-            
+            FileInfo f = new FileInfo(path);
+            if (f.Exists)
+            {
+                File.Delete(path);
+            }
+
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
