@@ -7,8 +7,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task3.V27.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            double res = Math.Pow((x - 1), 3*x + 1);
-            res = Math.Round(res, 3);
+            double res = Math.Round(Math.Pow((x -1), (3*x+1)), 3);
 
             string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
 
@@ -17,7 +16,6 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task3.V27.Lib
             {
                 File.Delete(path);
             }
-
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
