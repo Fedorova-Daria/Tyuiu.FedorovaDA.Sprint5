@@ -29,7 +29,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task5.V2.Lib
                         }
                     }
                 }
-                return positiveNumbers.Average();
+                return Math.Round(positiveNumbers.Average(),3);
                 // Если есть положительные числа, возвращаем среднее
                 
 
