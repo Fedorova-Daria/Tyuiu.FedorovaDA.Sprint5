@@ -21,9 +21,9 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
                 {
                     res = Math.Round(Math.Sin(Math.Pow(x, 3)) + (2 / x), 3);
                 }
-                return res;
+                
             }
-
+            return res;
         }
     }
 }
