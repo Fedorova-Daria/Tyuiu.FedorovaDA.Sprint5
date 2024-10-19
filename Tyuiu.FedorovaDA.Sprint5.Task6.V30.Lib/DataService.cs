@@ -14,22 +14,12 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task6.V30.Lib
 
             using(StreamReader reader = new StreamReader(path))
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    string[] words = path.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                var words = path.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
-                    foreach (string word in words)
-                    {
-                        if (word.Length == 8)
-                        {
-                            count++;
-                        }
-                    }
-                    
-                }
-                return count;
+                // Фильтруем только слова, состоящие из букв и цифр
+                return words.Count(word => word.Length == 8);
             }
+                
             
         }
     }
