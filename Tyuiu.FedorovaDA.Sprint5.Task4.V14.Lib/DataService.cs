@@ -12,7 +12,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            bool check = false;
+            
 
             using (StreamReader reader = new StreamReader(path))
             {
