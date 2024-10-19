@@ -6,8 +6,13 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            string Path = $@"C:\DataSprint5\InPutDataFileTask4V0.txt";
-            double res = ds.LoadFromDataFile(Path);
+            string path;
+
+            Console.WriteLine("Введите путь к файлу:");
+
+            path = Console.ReadLine();
+
+            double res = ds.LoadFromDataFile(path);
             Console.WriteLine(res);
         }
     }
