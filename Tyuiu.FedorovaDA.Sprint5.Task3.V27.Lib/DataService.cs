@@ -7,7 +7,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task3.V27.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            double res = Math.Round(Math.Pow((x -1), (3*x+1)), 3);
+            double res = Math.Round(Math.Pow(x -1, 3*x+1), 3);
 
             string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
 
