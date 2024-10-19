@@ -1,12 +1,12 @@
-﻿using Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14
+using Tyuiu.FedorovaDA.Sprint5.Task5.V2.Lib;
+namespace Tyuiu.FedorovaDA.Sprint5.Task5.V2
 {
     internal class Program
     {
@@ -19,7 +19,9 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14
 
             path = Console.ReadLine();
 
-            
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
             Console.WriteLine(ds.LoadFromDataFile(path));
         }
     }
