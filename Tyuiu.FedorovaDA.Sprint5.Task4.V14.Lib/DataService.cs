@@ -17,11 +17,13 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string content = reader.ReadLine();
-                double x = double.Parse(content);
-                res = Math.Round(Math.Sin(Math.Pow(x, 3)) + (2 / x), 3);
-                return res;
+                if (double.TryParse(content, out double x))
+                {
+                    res = Math.Round(Math.Sin(Math.Pow(x, 3)) + (2 / x), 3);
+                }
+                
             }
-            
+            return res;
         }
     }
 }
