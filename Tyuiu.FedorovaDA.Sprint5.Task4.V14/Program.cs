@@ -6,7 +6,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            string Path = @"C:\DataSprint5\InPutDataFileTask4V0.txt";
+            string Path = $@"C:\DataSprint5\InPutDataFileTask4V0.txt";
             double res = ds.LoadFromDataFile(Path);
             Console.WriteLine(res);
         }
