@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using System.Linq;
 using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.FedorovaDA.Sprint5.Task5.V2.Lib
 {
@@ -12,25 +9,30 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task5.V2.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            using(StreamReader reader = new StreamReader(path))
+            using (StreamReader reader = new StreamReader(path))
             {
-                string[] lines = path.Split(' ');
-                List<double> values = new List<double>();
+                List<double> positiveNumbers = new List<double>();
 
-                foreach (string line in lines)
+                string line;
+                // Чтение файла построчно
+                while ((line = reader.ReadLine()) != null)
                 {
-                    if (double.TryParse(line, out double number) && number > 0)
+                    // Разбиение строки на части (например, по пробелам, запятым и т.д.)
+                    var values = line.Split(new[] { ' ', ',', ';', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    // Преобразование значений в double
+                    foreach (var value in values)
                     {
-                        values.Add(number);
+                        if (double.TryParse(value, out double number) && number > 0)
+                        {
+                            positiveNumbers.Add(number);
+                        }
                     }
                 }
-                double sum = 0;
-                foreach (double value in values)
-                {
-                    sum += value;
-                }
+                return positiveNumbers.Average();
+                // Если есть положительные числа, возвращаем среднее
+                
 
-                return Math.Round(sum / values.Count, 3);
             }
         }
     }
