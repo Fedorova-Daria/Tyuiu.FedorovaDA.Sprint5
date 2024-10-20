@@ -1,7 +1,5 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint5;
 using System.IO;
-using System;
-using System.Diagnostics.Metrics;
 namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
 {
     public class DataService : ISprint5Task7V12
@@ -42,10 +40,8 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
                     }
                 }
             }
-            string word = "Н";
-            string newWord = result + word.Substring(16);
-            return newWord;
-        }
 
+            return result;
+        }
     }
 }
