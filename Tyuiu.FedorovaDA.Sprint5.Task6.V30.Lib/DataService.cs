@@ -12,15 +12,17 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task6.V30.Lib
         {
             int count = 0;
 
-            using(StreamReader reader = new StreamReader(path))
+            // Открываем файл с помощью StreamReader
+            using (StreamReader reader = new StreamReader(path))
             {
-                var words = path.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
-
-                // Фильтруем только слова, состоящие из букв и цифр
-                return words.Count(word => word.Length == 8);
+                string[] words = path.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (words.Length == 8) { count++; }
+                }
             }
-                
-            
+            return count;
         }
     }
 }

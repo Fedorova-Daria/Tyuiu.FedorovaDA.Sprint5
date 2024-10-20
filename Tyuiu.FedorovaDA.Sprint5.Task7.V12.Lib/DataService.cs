@@ -22,19 +22,15 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
                 {
                     foreach (char c in line)
                     {
-                        if (c >= 'а' && c <= 'я')
+                        if (char.IsUpper(c))
                         {
-                            result.Append((char)(c - 32));
-                        }
-                        else
-                        {
-                            result.Append(c);
+                            result += c;
                         }
                     }
                 }
             }
 
-            return result.ToString();
+            return result;
         }
     }
 }
