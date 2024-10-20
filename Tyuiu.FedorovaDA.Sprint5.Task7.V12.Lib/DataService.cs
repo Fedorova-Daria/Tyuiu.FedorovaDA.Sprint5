@@ -40,8 +40,9 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
                     }
                 }
             }
-
             return result;
+
+
         }
     }
 }
