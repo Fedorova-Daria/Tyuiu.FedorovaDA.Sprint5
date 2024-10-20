@@ -31,6 +31,10 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
                         {
                             result += 'Ё';
                         }
+                        else if (c == 'н') 
+                        {
+                            result += 'Н';
+                        }
                         else
                         {
                             // Оставляем символ без изменений, если это не строчная буква
