@@ -31,7 +31,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
                         {
                             result += 'Ё';
                         }
-                        else if (c == 'н') 
+                        else if (c == 'Н') 
                         {
                             result += 'Н';
                         }
