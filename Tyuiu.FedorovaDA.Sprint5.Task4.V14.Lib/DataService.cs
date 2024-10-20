@@ -27,10 +27,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
                 
                 result = Math.Round(result, 3);
             }
-            using (StreamWriter writer = new StreamWriter(path))
-            {
-                writer.WriteLine(result);
-            }
+
             return result;
         }
     }
