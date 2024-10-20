@@ -22,8 +22,18 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12.Lib
                 {
                     foreach (char c in line)
                     {
-                        if (char.IsUpper(c))
+                        if (c >= 'а' && c <= 'я')
                         {
+                            // Преобразуем строчную букву в заглавную
+                            result += (char)(c - ('а' - 'А'));
+                        }
+                        else if (c == 'ё') // Обработка буквы 'ё'
+                        {
+                            result += 'Ё';
+                        }
+                        else
+                        {
+                            // Оставляем символ без изменений, если это не строчная буква
                             result += c;
                         }
                     }
