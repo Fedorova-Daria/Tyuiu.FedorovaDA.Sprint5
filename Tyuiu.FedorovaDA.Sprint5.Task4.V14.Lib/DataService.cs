@@ -12,18 +12,23 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
+            double result = 0;
 
+            // Чтение данных из файла с использованием StreamReader
             using (StreamReader reader = new StreamReader(path))
             {
-                string content = reader.ReadLine();
-                if (double.TryParse(content, out double x))
-                {
-                    res = Math.Round(Math.Sin(Math.Pow(x, 3)) + (2 / x), 3);
-                }
                 
+                string line = reader.ReadLine();
+                double x = double.Parse(line);
+
+                
+                result = Math.Sin(Math.Pow(x, 3)) + 2 / x;
+
+                
+                result = Math.Round(result, 3);
             }
-            return res;
+
+            return result;
         }
     }
 }
