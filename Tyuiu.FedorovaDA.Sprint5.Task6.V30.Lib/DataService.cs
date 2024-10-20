@@ -12,17 +12,28 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task6.V30.Lib
         {
             int count = 0;
 
-            // Открываем файл с помощью StreamReader
+            // Открываем файл с использованием StreamReader
             using (StreamReader reader = new StreamReader(path))
             {
-                string[] words = path.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
                 string line;
+                // Читаем файл построчно
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (words.Length == 8) { count++; }
+                    // Разделяем строку на слова по пробелам и другим разделителям
+                    string[] words = line.Split(new char[] { ' ', ',', '.', '!', '?', ';', ':', '-', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    // Подсчитываем количество слов длиной 8 символов
+                    foreach (var word in words)
+                    {
+                        if (word.Length == 8)
+                        {
+                            count++;
+                        }
+                    }
                 }
             }
-            return count;
+
+            return count; // Возвращаем результат
         }
     }
 }
