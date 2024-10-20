@@ -13,13 +13,13 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Обработка текстовых файлов                                        *");
             Console.WriteLine("* Задание #7                                                              *");
-            Console.WriteLine("* Вариант #30                                                             *");
+            Console.WriteLine("* Вариант #12                                                             *");
             Console.WriteLine("* Выполнила: Федорова Дарья Артемовна | АСОиУб-24-1                       *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Дан файл С:\\DataSprint5\\InPutDataFileTask6V30.txt                      *");
-            Console.WriteLine("* в котором есть набор символьных данных.                                 *");
-            Console.WriteLine("* Найти количество слов длиной восемь символов в заданной строке.         *");
+            Console.WriteLine("* Дан файл С:\\DataSprint5\\InPutDataFileTask7V12.txt                      *");
+            Console.WriteLine("* в котором есть набор символьных данных.Заменить все строчные            *");
+            Console.WriteLine("* русские буквы на заглавные.Полученный результат сохранить.              *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
@@ -34,7 +34,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task7.V12
 
             string res = ds.LoadDataAndSave(path);
 
-            Console.WriteLine("Файл: " + res);
+            Console.WriteLine("Результат сохранен = " + res);
             Console.WriteLine("Создан!");
         }
     }
