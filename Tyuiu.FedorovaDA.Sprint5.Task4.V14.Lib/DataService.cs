@@ -26,10 +26,8 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
                 while ((line = reader.ReadLine()) != null)
                 {
                     string content = reader.ReadLine();
-                    if (double.TryParse(content, out double x))
-                    {
-                        res = Math.Round(Math.Sin(Math.Pow(x, 3)) + (2 / x), 3);
-                    }
+                    
+                    res = Math.Round(Math.Sin(Math.Pow(Convert.ToDouble(line), 3)) + (2 / Convert.ToDouble(line)), 3);
                 }
             }
             return res;
