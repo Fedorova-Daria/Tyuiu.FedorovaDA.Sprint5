@@ -15,19 +15,17 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task4.V14.Lib
             string content;
             using (StreamReader sr = new StreamReader(path))
             {
-                content = sr.ReadToEnd();
+                content = sr.ReadToEnd().Trim();
             }
 
-            
-            if (!double.TryParse(content, out double x))
+            double x;
+            if (!double.TryParse(content, NumberStyles.Any, CultureInfo.InvariantCulture, out x))
             {
-                throw new FormatException("Неверный формат числа в файле.");
+                content = content.Replace(',', '.');
             }
 
-            // Вычисление значения по формуле
             double y = Math.Sin(Math.Pow(x, 3)) + (2 / x);
 
-            
             return Math.Round(y, 3);
         }
     }
