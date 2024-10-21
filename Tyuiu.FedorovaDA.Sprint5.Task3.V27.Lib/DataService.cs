@@ -18,7 +18,7 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task3.V27.Lib
             
             string filePath = Path.Combine(tempPath, "OutPutFileTask3.bin");
 
-            // Запись результата в бинарный файл и получение Base64
+            
             string base64;
             using (MemoryStream ms = new MemoryStream())
             {
