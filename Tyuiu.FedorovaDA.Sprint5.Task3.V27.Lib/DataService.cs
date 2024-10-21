@@ -7,22 +7,32 @@ namespace Tyuiu.FedorovaDA.Sprint5.Task3.V27.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            double res = Math.Round(Math.Pow(x -1, 3*x+1), 3);
+            double result = Math.Pow(x - 1, 3 * x + 1);
 
-            string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
+            
+            result = Math.Round(result, 3);
 
-            FileInfo f = new FileInfo(path);
-            if (f.Exists)
+            
+            string tempPath = Path.GetTempPath();
+
+            
+            string filePath = Path.Combine(tempPath, "OutPutFileTask3.bin");
+
+            // Запись результата в бинарный файл и получение Base64
+            string base64;
+            using (MemoryStream ms = new MemoryStream())
             {
-                File.Delete(path);
+                using (BinaryWriter writer = new BinaryWriter(ms))
+                {
+                    writer.Write(result);
+                }
+                byte[] bytes = ms.ToArray();
+                File.WriteAllBytes(filePath, bytes);
+                base64 = Convert.ToBase64String(bytes);
             }
 
-            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
-            {
-                writer.Write(BitConverter.GetBytes(res));
-            }
-
-            return path;
+            // Возвращаем результат, Base64 представление и путь к файлу
+            return filePath;
         }
     }
 }
