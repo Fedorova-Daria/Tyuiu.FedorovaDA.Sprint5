@@ -55,7 +55,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.FedorovaDA.Sprint5.Ta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.FedorovaDA.Sprint5.Task5.V2.Test", "Tyuiu.FedorovaDA.Sprint5.Task5.V2.Test\Tyuiu.FedorovaDA.Sprint5.Task5.V2.Test.csproj", "{CE5C88C2-469C-4F10-8938-CD7E537D2CAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.FedorovaDA.Sprint6.Task7.V12.Test", "Tyuiu.FedorovaDA.Sprint6.Task7.V12.Test\Tyuiu.FedorovaDA.Sprint6.Task7.V12.Test.csproj", "{78AD9D92-A8A0-4A30-8BB1-9874CFA8F7BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.FedorovaDA.Sprint5.Task7.V12.Test", "Tyuiu.FedorovaDA.Sprint6.Task7.V12.Test\Tyuiu.FedorovaDA.Sprint5.Task7.V12.Test.csproj", "{78AD9D92-A8A0-4A30-8BB1-9874CFA8F7BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
